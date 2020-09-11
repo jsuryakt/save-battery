@@ -56,6 +56,7 @@ while(True):
         # if plugged in and battery is >= 95 display the message 
         if plugged == "Plugged In":
             # plays mp3 file
+            # Makesure of your pathname where the audio file was created
             playsound("C:\\Users\\Sunil\\Desktop\\Battery Assistant\\disconnect.mp3")      
             display(percent, plugged)
             # sleep for 5 minutes and loop back again
@@ -69,7 +70,10 @@ while(True):
         
         # if not plugged and battery is <=20 display the message 
         if plugged == "Not Plugged In":
+            # plays mp3 file
+            # Makesure of your pathname where the audio file was created
             playsound("C:\\Users\\Sunil\\Desktop\\Battery Assistant\\connect.mp3")
             display(percent, plugged)
             # sleep for 5 minutes and loop back again
             time.sleep(seconds)
+    # if battery percent is not <= 20 loops back and checks again
