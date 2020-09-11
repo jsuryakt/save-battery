@@ -1,3 +1,7 @@
+# Note if any of the below packages is not installed in your system then install it
+# Syntax "pip install <packagename>" where <packagename> can be playsound, psutil, time
+# open command prompt type command "pip install playsound"
+# open command prompt type command "pip install psutil"
 from playsound import playsound
 from tkinter import *
 from tkinter.ttk import *
