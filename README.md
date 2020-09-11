@@ -12,6 +12,9 @@ To notify User about the battery when it exceeds a certain limit or deceeds cert
 
 ### Text_to_Speech.py
 https://github.com/jsuryakt/save-battery/blob/master/Text_to_Speech.py
+
+Open this file and execute this once
+
 This Python file converts the text into audio file and we are playing this audio file in Battery_Assitant.py as indication.
 ### Battery_Assistant.py
 https://github.com/jsuryakt/save-battery/blob/master/Battery_Assistant.py
