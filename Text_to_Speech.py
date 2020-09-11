@@ -1,3 +1,5 @@
+# Note if any of the below packages is not installed in your system then install it
+# open command prompt type command "pip install gTTS"
 from gtts import gTTS
 import os
 
