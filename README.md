@@ -8,7 +8,7 @@ Thus, in order to maximize the length of time over which your battery remains ab
 
 ## About the Script
 
-To notify User about the battery when it exceeds a certain limit or deceeds certain limit to save battery life
+To notify User about the battery when it exceeds a certain limit or deceeds certain limit to save battery life.
 
 ### Text_to_Speech.py
 https://github.com/jsuryakt/save-battery/blob/master/Text_to_Speech.py
