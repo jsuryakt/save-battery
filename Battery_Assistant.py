@@ -65,7 +65,8 @@ while(True):
             display(percent, plugged)
             # sleep for 5 minutes and loop back again
             time.sleep(seconds)
-    # if battery percent is not >= 95 loops back and checks again
+            
+    # if battery percent is not >= 95, checks for the below condition.
     if percent <= 20:
         # gets the plugged status from battery
         plugged = battery.power_plugged 
@@ -80,4 +81,5 @@ while(True):
             display(percent, plugged)
             # sleep for 5 minutes and loop back again
             time.sleep(seconds)
+            
     # if battery percent is not <= 20 loops back and checks again

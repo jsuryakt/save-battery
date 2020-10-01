@@ -1,6 +1,6 @@
-# Save-Battery
+# `Save Battery`
 
-Leaving the battery plugged in when fully-charged will reduce its useful life. 
+Leaving the battery plugged in when FULLY-CHARGED will reduce its useful life. 
 
 That is, the maximum capacity of the battery will decline, thereby making a "full charge" refer to a state with less energy than a "full charge" previously denoted.  Note, however, that in general a lithium ion's battery life is measured in "charge cycles." This term refers to the charging and discharging of the battery; that is, do each of these once, and that is one "charge cycle." 
 
@@ -8,12 +8,13 @@ Thus, in order to maximize the length of time over which your battery remains ab
 
 ## About the Script
 
-To notify User about the battery when it exceeds a certain limit or deceeds certain limit to save battery life.
+To notify User about the battery when it exceeds a certain limit or deceeds certain limit to `Save Battery Life`
+
 
 ### Text_to_Speech.py
 https://github.com/jsuryakt/save-battery/blob/master/Text_to_Speech.py
 
-Open this file and execute this once
+Open this file and execute this once:
 
 This Python file converts the text into audio file and we are playing this audio file in Battery_Assitant.py as indication.
 ### Battery_Assistant.py
@@ -21,7 +22,7 @@ https://github.com/jsuryakt/save-battery/blob/master/Battery_Assistant.py
 
 This Python file contains the actual code to check if the battery is exceeding a certain limit or not and also the tkinter code for the window.
 
-#### I converted the Python script to a batch file using the following,
+#### I Converted the Python script to a batch file using the following,
 #### 1. Create a notepad file
 #### 2. Enter the following in the file
 ```
