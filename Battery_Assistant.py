@@ -57,16 +57,16 @@ while(True):
 
         if percent >= 95:
         # gets the plugged status from battery
-            plugged = battery.power_plugged 
+            plugged = battery.power_plugged
 
             plugged = "Plugged In" if plugged else "Not Plugged In"
 
             # if plugged in and battery is >= 95 display the message 
-            if plugged == "Plugged In":      
-                display(percent, plugged)
+            if plugged == "Plugged In":
                 engine.say(f'System is at {percent} percent battery level')
                 engine.say(f'Please disconnect the charger')
-                engine.runAndWait()
+                engine.runAndWait()    
+                display(percent, plugged)
                 # sleep for 5 minutes and loop back again
                 time.sleep(seconds)
                 
@@ -79,10 +79,10 @@ while(True):
             
             # if not plugged and battery is <=20 display the message 
             if plugged == "Not Plugged In":
+                display(percent, plugged)
                 engine.say(f'System is at {percent} percent battery level')
                 engine.say(f'Please connect the charger')
                 engine.runAndWait()
-                display(percent, plugged)
                 # sleep for 5 minutes and loop back again
                 time.sleep(seconds)
                 
