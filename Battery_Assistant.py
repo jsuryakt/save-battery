@@ -39,6 +39,9 @@ def display(percent, plugged):
     b2 = Button(master, text = "OK", command = master.destroy) 
     b2.place(relx = 0.5, rely = 0.7, anchor = CENTER) 
 
+    #Make the window jump above all other windows
+    master.attributes('-topmost',True)
+
     # infinite loop which is required to 
     # run tkinter program infinitely 
     # until an interrupt occurs 
