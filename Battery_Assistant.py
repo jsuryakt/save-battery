@@ -15,7 +15,7 @@ seconds = minutes * 60
 engine = pyttsx3.init()
 
 # creating Tk window 
-def display(percent, plugged):
+def display(percent, plugged, text):
     master = Tk() 
 
     # adding title to the tkinter window
@@ -26,7 +26,7 @@ def display(percent, plugged):
     master.geometry("%dx%d+%d+%d" %(300,100,x_coordinate,y_coordinate)) 
 
     # label for the text below    
-    l1 = Label(master, text = "Please disconnect the charger") 
+    l1 = Label(master, text = text)
     l1.config( anchor = CENTER) 
     l1.pack()
     
@@ -61,31 +61,33 @@ while(True):
         if percent >= 95:
         # gets the plugged status from battery
             plugged = battery.power_plugged
+            text = "Please disconnect the charger"
 
             plugged = "Plugged In" if plugged else "Not Plugged In"
 
             # if plugged in and battery is >= 95 display the message 
             if plugged == "Plugged In":
                 engine.say(f'System is at {percent} percent battery level')
-                engine.say(f'Please disconnect the charger')
+                engine.say(text)
                 engine.runAndWait()    
-                display(percent, plugged)
+                display(percent, plugged, text)
                 # sleep for 5 minutes and loop back again
                 time.sleep(seconds)
                 
             # if battery percent is not >= 95, checks for the below condition.
         if percent <= 20:
             # gets the plugged status from battery
-            plugged = battery.power_plugged 
+            plugged = battery.power_plugged
+            text = 'Please connect the charger'
 
             plugged = "Plugged In" if plugged else "Not Plugged In"
             
             # if not plugged and battery is <=20 display the message 
             if plugged == "Not Plugged In":
-                display(percent, plugged)
                 engine.say(f'System is at {percent} percent battery level')
-                engine.say(f'Please connect the charger')
+                engine.say(text)
                 engine.runAndWait()
+                display(percent, plugged, text)
                 # sleep for 5 minutes and loop back again
                 time.sleep(seconds)
                 
